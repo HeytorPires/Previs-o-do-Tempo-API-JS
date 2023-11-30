@@ -4,7 +4,7 @@ Bem-vindo ao Pirex Previsão, meu primeiro projeto de API! Este projeto foi dese
 
 ## Visão Geral
 
-O Pirex Previsão é uma aplicação da web simples, mas poderosa, que permite aos usuários obterem informações precisas sobre o clima atual e futuro. A integração da API OpenWeather possibilita a obtenção de dados confiáveis de previsão do tempo, enquanto a API Unsplash proporciona imagens de fundo correspondentes, criando uma experiência visual agradável.
+O Pirex Previsão é uma aplicação da web simples, mas poderosa, que permite aos usuários obterem informações precisas sobre o clima atual. A integração da API OpenWeather possibilita a obtenção de dados confiáveis de previsão do tempo, enquanto a API Unsplash proporciona imagens de fundo correspondentes, criando uma experiência visual agradável.
 
 ## Recursos Principais
 

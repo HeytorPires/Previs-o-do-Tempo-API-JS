@@ -13,11 +13,12 @@ document.getElementById("search").addEventListener("click", function () {
     Cidade = inputCidade;
 
     // Remover a class d "hide" dos elementos ao clicar em pesquisar
+    setTimeout(() => {
     let Hide = document.querySelectorAll(".hide");
     Hide.forEach(function (Elemento) {
         Elemento.classList.remove("hide");
     });
-
+    }, 1000);
     // API
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Cidade}&appid=4266c371550f53788f2b02d3e6311ae1&lang=pt_br`)
         .then(Resposta => Resposta.json())

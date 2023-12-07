@@ -14,7 +14,7 @@ O Pirex Previsão é uma aplicação da web simples, mas poderosa, que permite a
 
 ## Como Usar
 
-1. Acesse [Pirex Previsão](https://pirex-quizz.netlify.app/).
+1. Acesse [Pirex Quizz](https://pirex-quizz.netlify.app/).
 2. Insira o nome da cidade desejada na barra de pesquisa.
 3. Explore os detalhes da previsão do tempo e aproveite as imagens de fundo dinâmicas.
 

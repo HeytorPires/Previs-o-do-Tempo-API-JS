@@ -12,21 +12,30 @@ document.getElementById("search").addEventListener("click", function () {
     let inputCidade = document.getElementById("city-input").value;
     Cidade = inputCidade;
 
+    //Constates dos elementos de HIDE
+    const DivTotal = document.getElementById("div-pai")
+    const MeuLoading = document.getElementById("cloud-div")
+    MeuLoading.classList.remove("hide-cloud")
+    DivTotal.classList.add("hide")
+
     // Remover a class d "hide" dos elementos ao clicar em pesquisar
+    setTimeout(function() {
+        // Adicione a classe de volta após algum tempo 
+        MeuLoading.classList.add('hide-cloud');
+    }, 2990); 
+
     setTimeout(() => {
     let Hide = document.querySelectorAll(".hide");
     Hide.forEach(function (Elemento) {
         Elemento.classList.remove("hide");
     });
-    }, 1000);
+    }, 3000);
     // API
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Cidade}&appid=4266c371550f53788f2b02d3e6311ae1&lang=pt_br`)
         .then(Resposta => Resposta.json())
         .then(Corpo => {
             console.log(Corpo);
            
-            
-
             // Declaração para ícone da situação do tempo
             const DescricaoClima = Corpo.weather[0].description;
             let country = Corpo.sys.country;
@@ -47,7 +56,6 @@ document.getElementById("search").addEventListener("click", function () {
             let umidadeTag = document.querySelector("#umidity span")
             let BandeiraPais = document.querySelector("#country")
             let URLCountry = `https://flagcdn.com/16x12/${transCountry}.png`
-            
             
 
             // Puxando função de Clima

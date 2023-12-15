@@ -12,13 +12,25 @@ document.getElementById("search").addEventListener("click", function () {
     let inputCidade = document.getElementById("city-input").value;
     Cidade = inputCidade;
 
+    const DivTotal = document.getElementById("weather-data")
+    const MeuLoading = document.getElementById("cloud-div")
+    MeuLoading.classList.remove("hide-cloud")
+    DivTotal.classList.add("hide")
+
+
     // Remover a class d "hide" dos elementos ao clicar em pesquisar
+    setTimeout(function() {
+        // Adicione a classe de volta após algum tempo 
+        MeuLoading.classList.add('hide-cloud');
+    }, 2990); 
+
+    
     setTimeout(() => {
     let Hide = document.querySelectorAll(".hide");
     Hide.forEach(function (Elemento) {
         Elemento.classList.remove("hide");
     });
-    }, 1000);
+    }, 3000);
     // API
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Cidade}&appid=4266c371550f53788f2b02d3e6311ae1&lang=pt_br`)
         .then(Resposta => Resposta.json())
